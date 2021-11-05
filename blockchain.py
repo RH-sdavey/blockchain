@@ -135,7 +135,8 @@ class Blockchain:
         guess_hash = hashlib.sha256(guess).hexdigest()
         return guess_hash[:4] == "0000"
 
-class fe_flask_app:
+
+class FrontEndFlaskApp:
     """Front end for the flask app, maps a series of http endpoints to backend (Blockchain) functionality"""
 
     def __init__(self):
@@ -226,7 +227,7 @@ class fe_flask_app:
         ...
 
 if __name__ == '__main__':
-    front_end = fe_flask_app()
+    front_end = FrontEndFlaskApp()
     front_end.create_routes().run_dev()
 
 
